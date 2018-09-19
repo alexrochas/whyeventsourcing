@@ -1,16 +1,17 @@
 package br.com.alex.eventsourcing.todocrudservice;
 
 import io.eventuate.javaclient.driver.EventuateDriverConfiguration;
-import io.eventuate.javaclient.spring.common.EventuateCommonConfiguration;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
-@Import({EventuateDriverConfiguration.class, EventuateCommonConfiguration.class})
-public class TodoCrudServiceApplication {
+@Import({EventuateDriverConfiguration.class})
+@EnableAutoConfiguration
+public class TodoServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TodoCrudServiceApplication.class, args);
+		SpringApplication.run(TodoServiceApplication.class, args);
 	}
 }

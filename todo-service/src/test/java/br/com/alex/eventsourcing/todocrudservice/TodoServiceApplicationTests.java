@@ -1,4 +1,4 @@
-package br.com.alex.eventsourcing.todoservice;
+package br.com.alex.eventsourcing.todocrudservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
