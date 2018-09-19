@@ -1,12 +1,12 @@
 package br.com.alex.eventsourcing.todocrudservice.event;
 
-public class TodoCreatedEvent implements TodoEvent{
+public class TodoUpdatedEvent implements TodoEvent{
 
 	private String description;
 
-	public TodoCreatedEvent() {}
+	public TodoUpdatedEvent() {}
 
-	public TodoCreatedEvent(String description) {
+	public TodoUpdatedEvent(String description) {
 		this.description = description;
 	}
 
