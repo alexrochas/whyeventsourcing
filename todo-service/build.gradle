@@ -28,6 +28,7 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-jersey')
+	compile('org.springframework.boot:spring-boot-starter-web')
     compile "io.eventuate.client.java:eventuate-client-java-spring:0.20.0.RELEASE"
 	compile "io.eventuate.local.java:eventuate-local-java-jdbc:0.20.0.RELEASE"
 	testCompile('org.springframework.boot:spring-boot-starter-test')

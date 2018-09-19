@@ -3,6 +3,7 @@ package br.com.alex.eventsourcing.todocrudservice.config;
 import br.com.alex.eventsourcing.todocrudservice.aggregate.TodoAggregate;
 import br.com.alex.eventsourcing.todocrudservice.command.TodoCommand;
 import br.com.alex.eventsourcing.todocrudservice.handler.TodoSubscriber;
+import br.com.alex.eventsourcing.todocrudservice.repository.TodoRepository;
 import io.eventuate.sync.AggregateRepository;
 import io.eventuate.javaclient.spring.EnableEventHandlers;
 import io.eventuate.sync.EventuateAggregateStore;
@@ -20,8 +21,8 @@ public class ModuleConfig {
 	}
 
 	@Bean
-	public TodoSubscriber todoSubscriber() {
+	public TodoSubscriber todoSubscriber(TodoRepository todoRepository) {
 		System.out.println("Starting subscriber.");
-		return new TodoSubscriber();
+		return new TodoSubscriber(todoRepository);
 	}
 }
